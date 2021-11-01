@@ -1,0 +1,24 @@
+connections:
+  -
+    name: mongo-local
+    type: mongodb
+    host: mongodb://localhost:27017
+    username:
+    password:
+  -
+    name: domino-local
+    type: domino
+    host: https://localhost:443
+    username:
+    password:
+types:
+  -
+    name: car,
+    connection: domino-local,
+    uri: /mk,
+    collection: All
+  -
+    name: cat
+    connection: mongo-local
+    uri: cats
+    collection: all
